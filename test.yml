@@ -7,7 +7,7 @@ image_resource:
     tag: latest
 
 inputs:
-  - name: selenium
+  - name: rest-assured
 outputs:
   - name: mvn-output
 
