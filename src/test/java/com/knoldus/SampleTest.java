@@ -35,6 +35,7 @@ public class SampleTest {
         //capturing response body to perform validations
         String responseBody = response.getBody().asString();
         Reporter.log(responseBody); // to log the response
+        response.prettyPrint();
 
         // to capture response code through getStatusCode method.
         int status = response.getStatusCode();

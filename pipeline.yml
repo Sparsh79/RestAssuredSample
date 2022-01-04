@@ -1,0 +1,16 @@
+resources:
+  - name: rest-assured
+    type: git
+    source:
+      uri: https://github.com/Sparsh79/RestAssuredSample.git
+      branch: RestAssured
+
+jobs:
+  - name: mavenjob
+    serial: true
+    plan:
+      - get: rest-assured
+        trigger: true
+      - task: mvn-test
+        privileged: true
+        file: rest-assured/test.yml
